@@ -4,6 +4,13 @@ Basic usage:
 
 ./images_used [-vc] [INPUT DIRECTORY]
 
-
 -v      Verbose Comments
 -c      Exclude resource references in comments
+
+Tests:
+
+Run iOS tests:
+
+*** requires test-unit gem ***
+
+ruby ios_tests.rb
