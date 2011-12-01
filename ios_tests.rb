@@ -6,8 +6,15 @@ class ImagesUsedTest < Test::Unit::TestCase
     `./images_used.rb -v #{args} #{directory} > out.txt`
     output = File.open("out.txt","r").readlines
     result = {}
-    result[:not_used] = output.drop_while{ |x| !(x.include?("Resources not used:")) }.drop(2).take_while{ |x| !(x.include?("-------")) }.select{|x| x.strip != ""}.map{|x| x.strip }
-    result[:used] = output.drop_while{ |x| !(x.include?("Resources used:")) }.drop(2).take_while{ |x| !(x.include?("-------")) }.select{|x| x.strip != ""}.map{|x| x.strip }
+
+    get_section = Proc.new{ |section_text,output| output.drop_while{ |x| !(x.include?(section_text)) }.drop(2).take_while{ |x| !(x.include?("-------")) }.select{|x| x.strip != ""}.map{|x| x.strip } }
+
+    result[:not_used] = get_section.call("Resources not used:",output)
+    result[:used] = get_section.call("Resources used",output)
+    result[:duplicates] = get_section.call("Duplicate Resources:",output)
+    result[:image_files] = get_section.call("Resources:",output)
+    result[:code_files] = get_section.call("Code Files:",output)
+
     `rm out.txt`
 
     return result

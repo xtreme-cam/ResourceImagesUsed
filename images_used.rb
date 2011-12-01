@@ -70,12 +70,12 @@ end
 
 if verbose
   hor_line
-  puts "code files:"
+  puts "Code Files:"
   hor_line
   puts p.code.join("\n")
   puts "\n"
   hor_line
-  puts "images:"
+  puts "Resources:"
   hor_line
   puts p.imgs.join("\n")
 end
