@@ -1,4 +1,8 @@
+Determine what images are referenced inside your code.
 
+Basic usage:
+
+./images_used [-vc] [INPUT DIRECTORY]
 
 
 -v      Verbose Comments
