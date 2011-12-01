@@ -30,7 +30,7 @@ class ImagesUsedTest < Test::Unit::TestCase
     assert(output[:used].count == 2)
   end
 
-def test_with_comments
+  def test_with_comments
     output = run_script("./Test1","-c")
 
     assert(output[:not_used].include?("1.png"))
@@ -38,6 +38,13 @@ def test_with_comments
 
     assert(output[:not_used].count == 1)
     assert(output[:used].count == 1)
-end
+  end
+
+  def test_for_duplicates
+    output = run_script("./Test2")
+
+    assert(output[:duplicates].count == 1)
+    assert(output[:duplicates].include?("2.png"))
+  end
 
 end
