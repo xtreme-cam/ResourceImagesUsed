@@ -12,6 +12,7 @@ end
 
 verbose = ARGV.include?("-v")
 exclude_comments = ARGV.include?("-c")
+generate_delete_script = ARGV.include?("-s")
 
 class Array
   def only_duplicates
@@ -169,4 +170,15 @@ if verbose
   hor_line
   puts dup_imgs.join("\n")
   puts "\n"
+end
+
+if generate_delete_script
+  f = File.new("./delete.sh","w")
+  abs_path = File.expand_path(ARGV.last)
+  not_used.each do |i|
+    resource_path = p.imgs.drop_while{ |path| path.split("/").last != i }.first
+    f << "rm #{File.expand_path(resource_path)}\n"
+  end
+  f.close
+  `chmod a+x delete.sh`
 end

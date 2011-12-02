@@ -6,6 +6,7 @@ Basic usage:
 
 -v      Verbose Comments
 -c      Exclude resource references in comments
+-s      Generate script to unused resource files
 
 Tests:
 
