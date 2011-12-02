@@ -62,7 +62,7 @@ class DirParser
 
 end
 
-p = DirParser.new(ARGV.last)
+p = DirParser.new(ARGV.last.split("/").join("/"))
 
 def hor_line
   puts "--------------------------------------------------"
@@ -70,12 +70,12 @@ end
 
 if verbose
   hor_line
-  puts "Code Files:"
+  puts "Code Files: (#{p.code.count} Files)"
   hor_line
   puts p.code.join("\n")
   puts "\n"
   hor_line
-  puts "Resources:"
+  puts "Resources: (#{p.imgs.count} Files)"
   hor_line
   puts p.imgs.join("\n")
 end
@@ -148,14 +148,14 @@ end
 
 puts "\n" if verbose
 hor_line
-puts "Resources not used:"
+puts "Resources not used: (#{not_used.count} resources)"
 hor_line
 puts not_used.join("\n")
 puts "\n"
 
 if verbose
   hor_line
-  puts "Resources used:"
+  puts "Resources used: (#{usages.count} resources)"
   hor_line
   puts usages.keys.join("\n")
 end
@@ -165,7 +165,7 @@ if verbose
   dup_imgs = p.imgs.map{ |i| i.split("/").last }.only_duplicates.uniq
   puts "\n"
   hor_line
-  puts "Duplicate Resources:"
+  puts "Duplicate Resources: (#{dup_imgs.count} duplicates)"
   hor_line
   puts dup_imgs.join("\n")
   puts "\n"
