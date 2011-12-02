@@ -29,7 +29,7 @@ class DirParser
     @code = []
     @imgs = []
     @img_exts = ["png","jpg","jpeg"]
-    @code_exts = ["m","h","xib","c","cc","cpp","html","xml","erb","rb"]
+    @code_exts = ["m","h","xib","c","cc","cpp","html","xml","erb","rb","plist"]
 
     @files << file
 
