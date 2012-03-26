@@ -46,7 +46,7 @@ class DirParser
       #is file
       ext = f.split(".").last
       if @img_exts.include?(ext)
-        f["@2x."] = "." unless f.index("@2x").nil?
+        f["@2x."] = "." unless f.index("@2x.").nil?
         @imgs << f
       elsif @code_exts.include?(ext)
         @code << f
