@@ -25,9 +25,10 @@ class ImagesUsedTest < Test::Unit::TestCase
 
     assert(output[:used].include?("1.png"))
     assert(output[:used].include?("2.png"))
+    assert(output[:used].include?("3.png"))
 
     assert(output[:not_used].empty?)
-    assert(output[:used].count == 2)
+    assert(output[:used].count == 3)
   end
 
   def test_with_comments
@@ -35,9 +36,10 @@ class ImagesUsedTest < Test::Unit::TestCase
 
     assert(output[:not_used].include?("1.png"))
     assert(output[:used].include?("2.png"))
+    assert(output[:used].include?("3.png"))
 
     assert(output[:not_used].count == 1)
-    assert(output[:used].count == 1)
+    assert(output[:used].count == 2)
   end
 
   def test_for_duplicates

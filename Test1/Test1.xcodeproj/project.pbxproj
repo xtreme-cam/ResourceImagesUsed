@@ -15,6 +15,7 @@
 		E548F6F414881D4F00BBB9B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E548F6F314881D4F00BBB9B1 /* AppDelegate.m */; };
 		E548F70014881DC000BBB9B1 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E548F6FE14881DC000BBB9B1 /* 1.png */; };
 		E548F70114881DC000BBB9B1 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E548F6FF14881DC000BBB9B1 /* 2.png */; };
+		E58A2ED71520FD4A00E30975 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = E58A2ED61520FD4A00E30975 /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E548F6F314881D4F00BBB9B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E548F6FE14881DC000BBB9B1 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = SOURCE_ROOT; };
 		E548F6FF14881DC000BBB9B1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = SOURCE_ROOT; };
+		E58A2ED61520FD4A00E30975 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				E548F6FE14881DC000BBB9B1 /* 1.png */,
 				E548F6FF14881DC000BBB9B1 /* 2.png */,
+				E58A2ED61520FD4A00E30975 /* 3.png */,
 				E548F6EB14881D4F00BBB9B1 /* Test1-Info.plist */,
 				E548F6EC14881D4F00BBB9B1 /* InfoPlist.strings */,
 				E548F6EF14881D4F00BBB9B1 /* main.m */,
@@ -149,6 +152,7 @@
 				E548F6EE14881D4F00BBB9B1 /* InfoPlist.strings in Resources */,
 				E548F70014881DC000BBB9B1 /* 1.png in Resources */,
 				E548F70114881DC000BBB9B1 /* 2.png in Resources */,
+				E58A2ED71520FD4A00E30975 /* 3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

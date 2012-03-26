@@ -130,7 +130,11 @@ p.code.each do |c|
     intersect = []
     words.each { |w|
       imgs.each { |i|
-        intersect << i unless w.index(i).nil?
+        name_of_image = i.index(".").nil? ? i : i.split(".")[0]
+
+        unless w.index(i).nil? && (l.scan(/^(.*)(imageNamed:@\"#{name_of_image}\")(.*)$/).empty?)
+          intersect << i
+        end
       }
     }
     intersect.uniq!
@@ -138,6 +142,7 @@ p.code.each do |c|
     intersect.each do |image|
       occurence = {:line => l, :resource => image, :line_number => contents.index(l)}
       not_used.delete(image)
+
       if usages[image].nil?
         usages[image] = [occurence]
       else

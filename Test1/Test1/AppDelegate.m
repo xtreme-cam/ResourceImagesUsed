@@ -19,6 +19,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     [UIImage imageNamed:@"2.png"];
+    [UIImage imageNamed:@"3"];
     return YES;
 }
 
