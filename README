@@ -2,7 +2,7 @@ Determine what images are referenced inside your code.
 
 Basic usage:
 
-./images_used [-vc] [INPUT DIRECTORY]
+./images_used.rb [-vc] [INPUT DIRECTORY]
 
 -v      Verbose Comments
 -c      Exclude resource references in comments
