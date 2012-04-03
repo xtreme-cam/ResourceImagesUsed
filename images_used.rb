@@ -132,7 +132,7 @@ p.code.each do |c|
       imgs.each { |i|
         name_of_image = i.index(".").nil? ? i : i.split(".")[0]
 
-        unless w.index(i).nil? && (l.scan(/^(.*)(imageNamed:@\"#{name_of_image}\")(.*)$/).empty?)
+        if !(w.index(i).nil?) || !(w.index("\"" + name_of_image + "\"").nil?)
           intersect << i
         end
       }
